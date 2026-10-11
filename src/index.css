@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* Design tokens. Use them as Tailwind classes, e.g. bg-surface, text-muted, font-display. */
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  /* Bold condensed face for scores, stats and headings */
+  --font-display: "Barlow Condensed", ui-sans-serif, system-ui, sans-serif;
+
+  --color-bg: #0b0d10;
+  --color-surface: #15181d;
+  --color-surface-2: #1e2229;
+  --color-line: #2a2f38;
+  --color-ink: #f2f4f7;
+  --color-muted: #8b93a1;
+
+  --color-accent: #ff7a1a;
+  --color-team-a: #e5484d;
+  --color-team-b: #3e8bff;
+  --color-good: #3ecf8e;
+  --color-danger: #f2555a;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+/* Stat numerals line up in columns */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
